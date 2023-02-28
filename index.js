@@ -30,6 +30,8 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended : false}))
 app.use(bodyParser.json())
 app.use('/uploads', express.static('uploads'))
+
+
 app.use("/api/auth", authRoute);
 app.use("/api/posts", upload.single('image'), postRoute);
 
